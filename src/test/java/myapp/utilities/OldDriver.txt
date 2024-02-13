@@ -1,0 +1,74 @@
+package myapp.utilities;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+import java.time.Duration;
+
+public class Driver {
+
+    /*
+    This is a SIMPLE Driver class --- created on Singleton design pattern --- but we will make it more DYNAMIC later on
+     */
+
+    private static WebDriver driver;
+
+    public static WebDriver getDriver(){
+
+        if (driver == null) {
+            switch (ConfigReader.getProperty("browser")){
+                case "chrome":
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+                    break;
+                case "firefox":
+                    WebDriverManager.firefoxdriver().setup();
+                    driver = new FirefoxDriver();
+                    break;
+                case "safari":
+                    WebDriverManager.safaridriver().setup();
+                    driver = new SafariDriver();
+                    break;
+                case "edge":
+                    WebDriverManager.edgedriver().setup();
+                    driver = new EdgeDriver();
+                    break;
+                case "chrome-headless":
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver(new ChromeOptions().addArguments("--headless=new"));
+                    break;
+
+            }
+
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+            driver.manage().window().maximize();
+        }
+        return driver;
+    }
+    public static void closeDriver(){
+        if(driver!=null){
+            driver.quit();
+            driver=null;
+        }
+    }
+
+
+}
+1)Java has three ways to create String data:
+            i) String Class  ii) StringBuilder Class iii) StringBuffer Class
+    2) String Class "immutable" but other two are "mutable"
+    When we update a value in String class, Java does not change the original value.---> "immutable"
+    Java creates a new container and put updated data in this container
+    When you updated value in StringBuilder or StringBuffer Java update the original value ----> "mutable
+    3) Is there other immutable classes in Java : Yes all Wrapper classes are immutable.
+    4) The differences between StringBuilder and StringBuffer are:
+        i) StringBuilder is faster
+        ii) StringBuffer is "thread-safe" and "synchronized"
+        Thread-safe: Can handle multiple tasks (threads) at the same time
+        synchronised: Can put threads in logical order.

@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Classes Suite" verbose="1">
+    <test name="Running Classes">
+        <classes>
+            <class name="myapp.tests.dataprovider.Day17_DataProvider1"/>
+            <class name="myapp.tests.topics.Day14_Annotations"/>
+            <class name="myapp.tests.smoketest.Day16_BlueRental_Login"/>
+            <class name="myapp.tests.topics.Day15_DriverTest"/>
+        </classes>
+        
+    </test>
+</suite>
+        <!--
+            1. xml files are used to RUN existing test cases
+            2. Suite > test > packages > groups > classes > methods
+            3. Verbose is OPTIONAL ... it is only the amount of info that you see on the console, bigger number; more info you get
+            4. SAVE THE XML FILE FIRST, then run it
+            5. If the path is not correct, we see 'NO Test were found' error
+            -->

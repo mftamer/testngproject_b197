@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    
+    <listeners>
+        <listener class-name="myapp.utilities.ListenersUtils"></listener>
+    </listeners>
+    
+    
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/TAMER/IdeaProjects/testngproject_b197/src/test/java/myapp/tests/smoketest/Day16_BlueRental_Login.java">
+        <classes>
+            <class name="myapp.tests.smoketest.Day16_BlueRental_Login">
+                <methods>
+                    <include name="blueRentalLoginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

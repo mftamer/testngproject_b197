@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/TAMER/IdeaProjects/testngproject_b197/src/test/java/myapp/tests/extentreport/Day20_AdminLogin.java">
+        <classes>
+            <class name="myapp.tests.extentreport.Day20_AdminLogin">
+                <methods>
+                    <include name="blueRentalLoginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

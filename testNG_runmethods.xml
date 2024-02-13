@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Method Suite" verbose="1">
+    <test name="Running Methods">
+        <classes>
+            <class name="myapp.tests.excelautomation.Day17_ExcelLogin">
+                <methods>
+                    <include name="loginTest"/>
+                </methods>
+            </class>
+
+            <class name="myapp.tests.topics.Day15_Assertions">
+            <methods>
+                <include name="javaAssert"/>
+            </methods>
+            </class>
+
+            <class name="myapp.tests.dataprovider.Day17_DataProvider1">
+                <methods>
+                    <include name="test5"/>
+                </methods>
+            </class>
+
+            <class name="myapp.tests.smoketest.Day16_OrangeHRM_Login_DynamicWay">
+                <methods>
+                    <exclude name="loginTestDynamic"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>

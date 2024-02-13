@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="C:/Users/TAMER/IdeaProjects/testngproject_b197/src/test/java/myapp/tests/medunna_practice/Day21_US001.java(failed)">
+    <classes>
+      <class name="myapp.tests.medunna_practice.Day21_US001">
+        <methods>
+          <include name="setUP"/>
+          <include name="medunnaTest2"/>
+        </methods>
+      </class> <!-- myapp.tests.medunna_practice.Day21_US001 -->
+    </classes>
+  </test> <!-- C:/Users/TAMER/IdeaProjects/testngproject_b197/src/test/java/myapp/tests/medunna_practice/Day21_US001.java(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
